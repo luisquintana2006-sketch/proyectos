@@ -10,11 +10,11 @@ Hola, soy Luis Miguel, estudiante de Ingeniería en Ciencia de Datos en el ITESO
 
 ## Proyectos
 
-| Proyecto | Descripción | Herramientas |
-| --- | --- | --- |
-| [Ventas de videojuegos](./videojuegos-dashboard) | Análisis exploratorio y dashboard interactivo de ventas de videojuegos (1980–2024) | Python, pandas, Streamlit, Plotly, Seaborn |
-| [Dashboard de fútbol](./dashboard-futbol) | Reporte de estadísticas y comparativas de equipos de fútbol | Power BI, DAX |
-| [Fut Draft](./fut-draft) | Simulador por consola del modo draft de FIFA | Python, pandas |
+| Proyecto | Descripción | Herramientas | Archivos |
+| --- | --- | --- | --- |
+| Ventas de videojuegos | Análisis exploratorio y dashboard interactivo de ventas de videojuegos (1980–2024) | Python, pandas, Streamlit, Plotly, Seaborn | [carpeta `proyecto`](./proyecto) |
+| Dashboard de fútbol | Reporte de estadísticas y comparativas de equipos de fútbol | Power BI, DAX | [`Proyecto chido.pbix`](./Proyecto%20chido.pbix) |
+| Fut Draft | Simulador por consola del modo draft de FIFA | Python, pandas | [`finaldef.py`](./finaldef.py) y [`jugadores para futdraft.xlsx`](./jugadores%20para%20futdraft.xlsx) |
 
 ---
 
@@ -28,18 +28,19 @@ Análisis exploratorio de un dataset de ventas globales de videojuegos por conso
 - Notebook con el análisis exploratorio: ventas por año, género, consola y publisher, distribución regional, evolución de géneros, relación entre puntuación de la crítica y ventas, y mapa de calor consola × género.
 - Dashboard en Streamlit con filtros por rango de años, género y consola, indicadores clave (KPIs), un explorador de datos y la opción de cargar un CSV propio.
 
-**Archivos**
+**Archivos** (dentro de la carpeta [`proyecto`](./proyecto))
 
 - `app.py`: dashboard en Streamlit.
 - `videogames_eda.ipynb`: notebook del análisis exploratorio.
 - `videogames.csv`: datos utilizados.
-- `requirements.txt`: librerías necesarias.
+
+Las librerías necesarias están en el archivo [`requirements.txt`](./requirements.txt) de la raíz del repositorio.
 
 **Cómo ejecutarlo**
 
 ```bash
-cd videojuegos-dashboard
 pip install -r requirements.txt
+cd proyecto
 streamlit run app.py
 ```
 
@@ -56,9 +57,7 @@ Reporte en Power BI para analizar el rendimiento de equipos de fútbol.
 - Medidas calculadas de rendimiento, como puntos, partidos ganados, empatados y perdidos, diferencia de goles, goles por partido y promedios de tiros, corners y tarjetas amarillas.
 - Segmentadores por liga, temporada y equipo.
 
-**Archivos**
-
-- `Proyecto_chido.pbix`: reporte de Power BI.
+**Archivo:** [`Proyecto chido.pbix`](./Proyecto%20chido.pbix)
 
 **Cómo abrirlo:** descarga el archivo y ábrelo con Power BI Desktop.
 
@@ -76,13 +75,12 @@ Programa en consola que imita la mecánica del Fut Draft de FIFA: el usuario arm
 
 **Archivos**
 
-- `finaldef.py`: código del juego.
-- `jugadores para futdraft.xlsx`: base de datos de jugadores.
+- [`finaldef.py`](./finaldef.py): código del juego.
+- [`jugadores para futdraft.xlsx`](./jugadores%20para%20futdraft.xlsx): base de datos de jugadores.
 
-**Cómo ejecutarlo**
+**Cómo ejecutarlo** (desde la raíz del repositorio, donde están ambos archivos)
 
 ```bash
-cd fut-draft
 pip install pandas openpyxl
 python finaldef.py
 ```
